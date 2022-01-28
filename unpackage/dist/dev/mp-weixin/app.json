@@ -5,7 +5,8 @@
     "pages/webView/webView",
     "pages/login/login",
     "pages/register/register",
-    "pages/tree/tree"
+    "pages/tree/tree",
+    "pages/project/project"
   ],
   "subPackages": [
     {
@@ -13,6 +14,12 @@
       "pages": [
         "article",
         "searchArticle"
+      ]
+    },
+    {
+      "root": "pages/project/projectList",
+      "pages": [
+        "list"
       ]
     }
   ],
@@ -38,6 +45,12 @@
         "pagePath": "pages/tree/tree",
         "iconPath": "static/icon/tixi.png",
         "selectedIconPath": "static/icon/tixi_s.png",
+        "text": "体系"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "iconPath": "static/icon/project.png",
+        "selectedIconPath": "static/icon/project_s.png",
         "text": "体系"
       },
       {

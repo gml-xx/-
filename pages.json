@@ -38,7 +38,14 @@
 		"path": "pages/tree/tree",
 		"style": {
 			"enablePullDownRefresh": false,
-			"navigationBarTitleText":"知识体系"
+			"navigationBarTitleText": "知识体系"
+		}
+
+	}, {
+		"path": "pages/project/project",
+		"style": {
+			"navigationBarTitleText": "项目分类",
+			"enablePullDownRefresh": false
 		}
 
 	}],
@@ -54,6 +61,16 @@
 			"path": "searchArticle",
 			"style": {
 				"navigationBarTitleText": "搜索结果",
+				"enablePullDownRefresh": false
+			}
+
+		}]
+	}, {
+		"root": "pages/project/projectList",
+		"pages": [{
+			"path": "list",
+			"style": {
+				"navigationBarTitleText": "项目列表",
 				"enablePullDownRefresh": false
 			}
 
@@ -82,6 +99,11 @@
 			"pagePath": "pages/tree/tree",
 			"iconPath": "static/icon/tixi.png",
 			"selectedIconPath": "static/icon/tixi_s.png",
+			"text": "体系"
+		}, {
+			"pagePath": "pages/project/project",
+			"iconPath": "static/icon/project.png",
+			"selectedIconPath": "static/icon/project_s.png",
 			"text": "体系"
 		}, {
 			"pagePath": "pages/mine/mine",

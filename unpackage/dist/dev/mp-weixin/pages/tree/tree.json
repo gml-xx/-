@@ -2,6 +2,7 @@
   "enablePullDownRefresh": false,
   "navigationBarTitleText": "知识体系",
   "usingComponents": {
+    "u-skeleton": "/uni_modules/uview-ui/components/u-skeleton/u-skeleton",
     "u-notify": "/uni_modules/uview-ui/components/u-notify/u-notify",
     "u-search": "/uni_modules/uview-ui/components/u-search/u-search",
     "u-divider": "/uni_modules/uview-ui/components/u-divider/u-divider",

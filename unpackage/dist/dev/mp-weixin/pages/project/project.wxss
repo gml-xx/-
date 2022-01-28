@@ -1,0 +1,12 @@
+
+.item-class.data-v-968ded8c {
+	padding: 20rpx;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #eee;
+	font-size: 28rpx;
+	color: #333;
+}
+.item-class.data-v-968ded8c:active {
+	background-color: #EEEEEE;
+}
+

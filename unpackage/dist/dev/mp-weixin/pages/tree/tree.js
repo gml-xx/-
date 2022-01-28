@@ -95,20 +95,23 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
+    uSkeleton: function() {
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-skeleton/u-skeleton */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-skeleton/u-skeleton")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-skeleton/u-skeleton.vue */ 389))
+    },
     uNotify: function() {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-notify/u-notify */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-notify/u-notify")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-notify/u-notify.vue */ 301))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-notify/u-notify */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-notify/u-notify")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-notify/u-notify.vue */ 315))
     },
     uSearch: function() {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-search/u-search */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-search/u-search")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-search/u-search.vue */ 309))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-search/u-search */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-search/u-search")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-search/u-search.vue */ 323))
     },
     uDivider: function() {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-divider/u-divider */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-divider/u-divider")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-divider/u-divider.vue */ 226))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-divider/u-divider */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-divider/u-divider")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-divider/u-divider.vue */ 240))
     },
     uCollapse: function() {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-collapse/u-collapse */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-collapse/u-collapse")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-collapse/u-collapse.vue */ 317))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-collapse/u-collapse */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-collapse/u-collapse")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-collapse/u-collapse.vue */ 331))
     },
     uCollapseItem: function() {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-collapse-item/u-collapse-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-collapse-item/u-collapse-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-collapse-item/u-collapse-item.vue */ 325))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-collapse-item/u-collapse-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-collapse-item/u-collapse-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-collapse-item/u-collapse-item.vue */ 339))
     }
   }
 } catch (e) {
@@ -203,6 +206,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 var _request = __webpack_require__(/*! @/common/request.js */ 143); //
 //
 //
@@ -231,7 +236,12 @@ var _request = __webpack_require__(/*! @/common/request.js */ 143); //
 //
 //
 //
-var _default = { onLoad: function onLoad() {this.getTreeData();}, data: function data() {return { keyword: '', treeData: [] };}, methods: { getTreeData: function getTreeData() {var _this = this;(0, _request.request)({ url: '/tree/json' }).then(function (res) {_this.treeData = res.data.data;});}, jumpPage: function jumpPage(id, name) {uni.navigateTo({ url: "/pages/tree/articlePage/article?cid=".concat(id, "&title=").concat(name) });}, jumpSearchPage: function jumpSearchPage() {if (!this.keyword) return this.$refs.uNotify.warning('请先输入搜索内容');uni.navigateTo({ url: "/pages/tree/articlePage/searchArticle?keyword=".concat(this.keyword) });
+//
+//
+var _default = { onLoad: function onLoad() {this.getTreeData();}, data: function data() {return { keyword: '', treeData: [], loading: false };}, methods: { getTreeData: function getTreeData() {var _this = this;this.loading = true;(0, _request.request)({ url: '/tree/json' }).then(function (res) {_this.treeData = res.data.data;_this.loading = false;});}, jumpPage: function jumpPage(id, name) {uni.navigateTo({ url: "/pages/tree/articlePage/article?cid=".concat(id, "&title=").concat(name) });}, jumpSearchPage: function jumpSearchPage() {if (!this.keyword) return this.$refs.uNotify.warning('请先输入搜索内容');
+      uni.navigateTo({
+        url: "/pages/tree/articlePage/searchArticle?keyword=".concat(this.keyword) });
+
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

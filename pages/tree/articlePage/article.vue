@@ -1,7 +1,7 @@
 <template>
 	<view class="container">
 		<u-empty mode="data" :show="isEmpty"></u-empty>
-		<Article :data="articleList" :loading="loading" @click="jumpPage"></Article>
+		<Article :data="articleList" :loading="loading"></Article>
 		<u-divider text="没有更多了" v-if="nomore"></u-divider>
 	</view>
 </template>
@@ -71,23 +71,6 @@
 					this.nomore = this.pageNum >= (data.pageCount - 1)
 				})
 			},
-			jumpPage(val) {
-				let url; 
-				if(isNaN(val)) {
-					url = val
-				}else {
-					url = this.bannerList[val].url
-				}
-				
-				// #ifndef H5
-				uni.navigateTo({
-					url: '/pages/webView/webView?url=' + encodeURI(url)
-				})
-				// #endif
-				// #ifdef H5
-				window.open(url)
-				// #endif
-			}
 		}
 	}
 </script>

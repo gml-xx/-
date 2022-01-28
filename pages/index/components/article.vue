@@ -39,7 +39,21 @@
 		},
 		methods: {
 			jumpPage(val){
-				this.$emit('click', val)
+				let url;
+				if (isNaN(val)) {
+					url = val
+				} else {
+					url = this.bannerList[val].url
+				}
+				
+				// #ifndef H5
+				uni.navigateTo({
+					url: '/pages/webView/webView?url=' + encodeURI(url)
+				})
+				// #endif
+				// #ifdef H5
+				window.open(url)
+				// #endif
 			}
 		}
 	}

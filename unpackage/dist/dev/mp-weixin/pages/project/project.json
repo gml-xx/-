@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "项目分类",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-skeleton": "/uni_modules/uview-ui/components/u-skeleton/u-skeleton",
+    "u-divider": "/uni_modules/uview-ui/components/u-divider/u-divider",
+    "u-icon": "/uni_modules/uview-ui/components/u-icon/u-icon"
+  }
+}

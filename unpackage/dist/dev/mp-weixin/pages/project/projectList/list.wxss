@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+/* uni.scss */
+.item-box.data-v-90dad3f6 {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10rpx;
+}
+.item-box .bottom-item.data-v-90dad3f6 {
+  font-size: 24rpx;
+}
+.item-box .bottom-item text.data-v-90dad3f6:first-child {
+  padding: 10rpx;
+  border-radius: 10rpx;
+  background-color: #007AFF;
+  color: #FFFFFF;
+}
+.item-box .bottom-item.data-v-90dad3f6 {
+  color: #369;
+}
+.item-box .time.data-v-90dad3f6 {
+  text-align: right;
+  font-size: 24rpx;
+  color: #666;
+}
+

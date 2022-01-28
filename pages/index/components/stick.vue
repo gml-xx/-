@@ -22,9 +22,6 @@
 			}
 		},
 		methods: {
-			jumpPage(val){
-				this.$emit('click', val)
-			}
 		}
 	}
 </script>

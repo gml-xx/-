@@ -3,6 +3,8 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "u-search": "/uni_modules/uview-ui/components/u-search/u-search",
-    "u-divider": "/uni_modules/uview-ui/components/u-divider/u-divider"
+    "u-divider": "/uni_modules/uview-ui/components/u-divider/u-divider",
+    "u-empty": "/uni_modules/uview-ui/components/u-empty/u-empty",
+    "article": "/pages/index/components/article"
   }
 }

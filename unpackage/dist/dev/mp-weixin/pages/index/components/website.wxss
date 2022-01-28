@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+/* uni.scss */
+.item-box.data-v-3637c2f8 {
+  padding: 30rpx 20rpx;
+  color: #007AFF;
+}
+.item-box.data-v-3637c2f8:active {
+  color: #eee;
+}
+

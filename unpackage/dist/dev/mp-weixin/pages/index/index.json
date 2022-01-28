@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "玩安卓",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "u-swiper": "/uni_modules/uview-ui/components/u-swiper/u-swiper",
+    "u-sticky": "/uni_modules/uview-ui/components/u-sticky/u-sticky",
+    "u-tabs": "/uni_modules/uview-ui/components/u-tabs/u-tabs",
+    "u-empty": "/uni_modules/uview-ui/components/u-empty/u-empty",
+    "u-divider": "/uni_modules/uview-ui/components/u-divider/u-divider",
+    "u-back-top": "/uni_modules/uview-ui/components/u-back-top/u-back-top",
+    "article": "/pages/index/components/article",
+    "web-site": "/pages/index/components/website",
+    "hot-word": "/pages/index/components/hotword",
+    "stick": "/pages/index/components/stick"
+  }
+}

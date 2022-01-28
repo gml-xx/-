@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+/* uni.scss */
+.tag-class.data-v-4df1d134 {
+  flex-grow: 1;
+  padding: 10px;
+  margin: 5px;
+  background-color: #FFFFFF;
+  border: 1px solid #fff;
+  color: #666;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: -3px -3px 1px 1px rgba(255, 255, 255, 0.8), 2px 2px 1px 1px rgba(173, 173, 173, 0.2);
+}
+

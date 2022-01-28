@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+/* uni.scss */
+.banner {
+  margin-bottom: 20px;
+}
+.main-container .tab-bar {
+  margin-bottom: 20rpx;
+  background-color: #FFFFFF;
+  border-radius: 10rpx;
+}
+.main-container .list-container {
+  margin: 5rpx;
+}
+.item-box {
+  display: flex;
+  flex-direction: column;
+}
+.item-box .top-item {
+  font-size: 24rpx;
+}
+.item-box .top-item text:first-child {
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  background-color: #007AFF;
+  color: #FFFFFF;
+}
+.item-box .top-item text:last-child {
+  color: #666;
+}
+.item-box .bottom-item {
+  color: #369;
+}
+

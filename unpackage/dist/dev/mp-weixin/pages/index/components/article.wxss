@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+/* uni.scss */
+.item-box.data-v-3579ec5a {
+  display: flex;
+  flex-direction: column;
+}
+.item-box .top-item.data-v-3579ec5a {
+  font-size: 24rpx;
+}
+.item-box .top-item text.data-v-3579ec5a:first-child {
+  padding: 10rpx;
+  border-radius: 10rpx;
+  background-color: #007AFF;
+  color: #FFFFFF;
+}
+.item-box .top-item text.data-v-3579ec5a:last-child {
+  color: #666;
+}
+.item-box .bottom-item.data-v-3579ec5a {
+  color: #369;
+}
+

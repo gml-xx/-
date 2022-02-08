@@ -2,8 +2,53 @@
 /* 水平间距 */
 /* 水平间距 */
 /* uni.scss */
-.grid {
-  -webkit-transform: translateY(60%);
-          transform: translateY(60%);
+.header-userinfo.data-v-dcbcfe34 {
+  position: relative;
+  height: 30vh;
+  background-color: #007AFF;
+  text-align: center;
+  box-shadow: 1px 0 10px 5px rgba(0, 123, 255, 0.5);
+}
+.header-userinfo > view.data-v-dcbcfe34 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.header-userinfo .avatar.data-v-dcbcfe34 {
+  margin: 10rpx auto;
+}
+.header-userinfo .username.data-v-dcbcfe34 {
+  color: #FFFFFF;
+}
+.operate-list.data-v-dcbcfe34 {
+  margin: 20px 10px;
+}
+.operate-list .item.data-v-dcbcfe34 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;
+  padding: 15rpx 20rpx;
+  background-color: #FFFFFF;
+  color: #333;
+  border-bottom: #eee 1px solid;
+}
+.operate-list .item.data-v-dcbcfe34:last-child {
+  border: none;
+}
+.operate-list .item .image.data-v-dcbcfe34 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.btn.data-v-dcbcfe34 {
+  position: fixed;
+  bottom: 160rpx;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 

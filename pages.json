@@ -23,7 +23,9 @@
 	}, {
 		"path": "pages/login/login",
 		"style": {
-			"navigationBarTitleText": "",
+			"navigationBarBackgroundColor":"#007AFF",
+			"navigationBarTitleText":"登录",
+			"navigationBarTextStyle":"white",
 			"enablePullDownRefresh": false
 		}
 
@@ -104,7 +106,7 @@
 			"pagePath": "pages/project/project",
 			"iconPath": "static/icon/project.png",
 			"selectedIconPath": "static/icon/project_s.png",
-			"text": "体系"
+			"text": "项目"
 		}, {
 			"pagePath": "pages/mine/mine",
 			"iconPath": "static/icon/mine.png",

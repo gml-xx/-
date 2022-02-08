@@ -7,7 +7,6 @@
 				rowsHeight="80"
 			>
 		<u-empty mode="data" :show="isEmpty"></u-empty>
-		<u-divider text="没有更多了" v-if="nomore"></u-divider>
 		<view class="list-container">
 			<view class="item-container flex--justify card" v-for="item in data" :key="item.id" @click="jumpPage(item.link)">
 				<u--image :showLoading="true" :src="item.envelopePic" width="80px" height="80px" radius="5" ></u--image>
@@ -21,6 +20,7 @@
 				</view>
 			</view>
 		</view>
+		<u-divider text="没有更多了" v-if="nomore"></u-divider>
 		</u-skeleton>
 	</view>
 </template>

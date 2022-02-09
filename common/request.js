@@ -11,6 +11,9 @@ export function request(params) {
 		uni.request({
 			url: baseUrl + url,
 			method: method || 'GET',
+			header:{
+				'Content-Type': 'application/x-www-form-urlencoded'
+			},
 			data,
 			success: (res) => {
 				resolve(res)

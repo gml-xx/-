@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
 	state:{
-		windowHeight: 0
+		windowHeight: 0,
+		userinfo: {}
 	},
 	mutations:{
 		SET_WINDOWHEIGHT: state=> {
@@ -14,6 +15,9 @@ const store = new Vuex.Store({
 					state.windowHeight = res.windowHeight
 				}
 			})
+		},
+		SET_USERINFO: (state, data)=> {
+			state.userInfo = data
 		}
 	}
 })

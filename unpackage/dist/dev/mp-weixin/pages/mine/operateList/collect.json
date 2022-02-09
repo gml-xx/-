@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "收藏",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-skeleton": "/uni_modules/uview-ui/components/u-skeleton/u-skeleton",
+    "u-empty": "/uni_modules/uview-ui/components/u-empty/u-empty",
+    "u-icon": "/uni_modules/uview-ui/components/u-icon/u-icon",
+    "u-divider": "/uni_modules/uview-ui/components/u-divider/u-divider"
+  }
+}

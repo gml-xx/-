@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+/* uni.scss */
+.item.data-v-c1dd18cc {
+  color: #666666;
+  line-height: 1.2;
+}
+.item .title.data-v-c1dd18cc {
+  margin-bottom: 20rpx;
+  color: #333333;
+}
+.btn.data-v-c1dd18cc {
+  position: fixed;
+  bottom: 10vh;
+}
+

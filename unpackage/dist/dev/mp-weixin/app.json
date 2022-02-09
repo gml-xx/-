@@ -4,7 +4,6 @@
     "pages/mine/mine",
     "pages/webView/webView",
     "pages/login/login",
-    "pages/register/register",
     "pages/tree/tree",
     "pages/project/project"
   ],
@@ -20,6 +19,15 @@
       "root": "pages/project/projectList",
       "pages": [
         "list"
+      ]
+    },
+    {
+      "root": "pages/mine/operateList",
+      "pages": [
+        "chat",
+        "comment",
+        "collect",
+        "point"
       ]
     }
   ],

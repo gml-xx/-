@@ -37,11 +37,26 @@
   -webkit-filter: blur(3px);
           filter: blur(3px);
 }
-.login-box .item-from.data-v-b237504c {
-  color: #FFFFFF;
+.login-box .item-form.data-v-b237504c {
+  font-size: 40rpx;
+  color: #FFFFFF !important;
+}
+.btn-group.data-v-b237504c {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.btn-group .active.data-v-b237504c {
+  width: 70%;
+  font-size: 60rpx;
+  transition: all .25s linear;
 }
 .btn.data-v-b237504c {
+  font-size: 30rpx;
   margin-top: 60rpx;
+}
+.btn.data-v-b237504c:last-child {
+  background-color: #18BC37;
 }
 .image.data-v-b237504c {
   position: fixed;

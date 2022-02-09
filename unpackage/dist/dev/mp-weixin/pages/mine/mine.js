@@ -96,10 +96,10 @@ var components
 try {
   components = {
     uAvatar: function() {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-avatar/u-avatar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-avatar/u-avatar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-avatar/u-avatar.vue */ 470))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-avatar/u-avatar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-avatar/u-avatar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-avatar/u-avatar.vue */ 307))
     },
     uIcon: function() {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-icon/u-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 308))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-icon/u-icon")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 315))
     }
   }
 } catch (e) {
@@ -178,42 +178,48 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _request = __webpack_require__(/*! @/common/request.js */ 143); //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = { data: function data() {return { icon: '../../static/Android.png', userInfo: {}, list: [{ id: 1, label: '消息列表', icon: '../../static/chat.png', path: '' }, { id: 2, label: '评论列表', icon: '../../static/comment.png', path: '' }, { id: 3, label: '收藏', icon: '../../static/collect.png', path: '' }, {
+var _request = __webpack_require__(/*! @/common/request.js */ 143);
+var _vuex = __webpack_require__(/*! vuex */ 13);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
+{
+  onShow: function onShow() {var
+    userInfo = this.$store.state.userInfo;
+    if (userInfo) this.userInfo = userInfo;
+  },
+  data: function data() {
+    return {
+      icon: '../../static/Android.png',
+      userInfo: {},
+      list: [{
+        id: 1,
+        label: '消息列表',
+        icon: '../../static/chat.png',
+        path: '/pages/mine/operateList/chat' },
+      {
+        id: 2,
+        label: '评论列表',
+        icon: '../../static/comment.png',
+        path: '/pages/mine/operateList/comment' },
+      {
+        id: 3,
+        label: '收藏',
+        icon: '../../static/collect.png',
+        path: '/pages/mine/operateList/collect' },
+      {
         id: 4,
         label: '积分',
         icon: '../../static/point.png',
-        path: '' }] };
+        path: '/pages/mine/operateList/point' }] };
 
 
   },
-  methods: {
+  methods: _objectSpread(_objectSpread({},
+  (0, _vuex.mapMutations)(['SET_USERINFO'])), {}, {
     loginHandle: function loginHandle(e) {
       uni.navigateTo({
         url: '/pages/login/login' });
 
     },
-    loginoOutHandle: function loginoOutHandle() {
+    loginoOutHandle: function loginoOutHandle() {var _this = this;
       uni.showLoading({
         title: '退出登录...',
         mask: true });
@@ -222,11 +228,18 @@ var _default = { data: function data() {return { icon: '../../static/Android.png
         url: '/user/logout/json' }).
       then(function (res) {
         if (res.data.data === null) {
+          _this.SET_USERINFO(null);
+          _this.userInfo = {};
           uni.showToast({
             title: '退出登录成功',
             icon: 'success',
             duration: 2000,
-            mask: true });
+            mask: true,
+            success: function success() {
+              uni.switchTab({
+                url: '/pages/index/index' });
+
+            } });
 
         } else {
           uni.showToast({
@@ -236,7 +249,16 @@ var _default = { data: function data() {return { icon: '../../static/Android.png
 
         }
       });
-    } } };exports.default = _default;
+    },
+    jumpPage: function jumpPage(event) {
+      if (!this.userInfo.username) return uni.showToast({
+        title: '还未登录，请先登录！',
+        icon: 'none' });
+
+      uni.navigateTo({
+        url: event.path });
+
+    } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
